@@ -87,7 +87,7 @@ public class UserApi {
 		if(user == null){
 			BasicDBObject newUSer = new BasicDBObject("user_id",user_id).append("access_token", access_token).append("phone_number", phone_number);
 			USERS.insert(newUSer);
-			return apiResponse("ok","New user","new_user");
+			return apiResponse("ok","New user","\"new_user\"");
 		}else{
 			user.removeField("_id");
 			return apiResponse("ok","Signin success",objectMapper.writeValueAsString(user));

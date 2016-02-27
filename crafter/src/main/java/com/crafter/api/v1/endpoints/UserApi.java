@@ -99,7 +99,7 @@ public class UserApi {
 	@GET
 	@Path("/profile/{profile_user_id}")
 	
-	@ApiOperation(value = "User signin", response = String.class,position = 15)
+	@ApiOperation(value = "User profile details", response = String.class,position = 15)
 	
 	public String getProfile(@PathParam("profile_user_id") String profile_user_id,@QueryParam("user_id") String user_id, @QueryParam("access_token") String access_token, @QueryParam("phone_number") String phone_number) throws Exception{		
 		
